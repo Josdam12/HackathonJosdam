@@ -1,36 +1,39 @@
-body {
-    background-color: red;
-}
-
-
 .sidebar {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0; /* or right: 0; for right-side placement */
-    width: 50px;
-    background-color: #f0f0f0;
-    padding: 10px;
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* Adjust the gap between icons as needed */
 }
 
 .sidebar a {
-    display: block;
-    margin-bottom: 10px;
-    color: #333;
-    text-decoration: none;
+  display: block;
+  text-decoration: none;
+  color: #fff; /* Change the color to match your website's theme */
+  background-color: #333; /* Change the background color to match your website's theme */
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.sidebar a:hover {
+  background-color: #444;
 }
 
 .sidebar i {
-    font-size: 24px;
+  font-size: 20px;
 }
-
 
 
 .chevron-up {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #fff;
+  background-color: gslategrey;
   border: 1px solid #ccc;
   padding: 10px;
   border-radius: 50%;
@@ -42,3 +45,11 @@ body {
   background-color: #e0e0e0;
 }
 
+@media screen and (max-width: 768px) {
+    .profile, .dots-1, .dots-2, .dots-3, .dots-4 {
+        display: none;
+    }
+}
+#hover-image:hover {
+    content: url("assets/josdam2.png")
+}
